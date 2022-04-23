@@ -1,39 +1,24 @@
 {
   "name": {
-    "en": "TickTick User",
-    "nl": "TickTick Gebruiker"
+    "en": "TickTickUser"
   },
   "class": "other",
   "capabilities": [],
   "platforms": [
     "local"
   ],
-  "connectivity": [],
+  "connectivity": [
+    "cloud"
+  ],
   "images": {
     "small": "{{driverAssetsPath}}/images/small.png",
     "large": "{{driverAssetsPath}}/images/large.png",
     "xlarge": "{{driverAssetsPath}}/images/xlarge.png"
   },
-  "icon": "{{driverAssetsPath}}/icon.svg",
   "pair": [
     {
-      "id": "login_credentials",
-      "template": "login_credentials",
-      "options": {
-        "logo": "{{driverAssetsPath}}/images/logoColor.png",
-        "usernameLabel": {
-          "en": "E-mail address or Telephone number"
-        },
-        "usernamePlaceholder": {
-          "en": "john@doe.com"
-        },
-        "passwordLabel": {
-          "en": "Password"
-        },
-        "passwordPlaceholder": {
-          "en": "Password"
-        }
-      }
+      "id": "login_oauth2",
+      "template": "login_oauth2"
     },
     {
       "id": "list_devices",
@@ -49,8 +34,8 @@
   ],
   "repair": [
     {
-      "id": "login_credentials",
-      "template": "login_credentials"
+      "id": "login_oauth2",
+      "template": "login_oauth2"
     }
   ]
 }

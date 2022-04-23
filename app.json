@@ -11,32 +11,11 @@
     "en": "TickTick"
   },
   "description": {
-    "en": "Adds support for TickTick accounts."
+    "en": "Automate your tasks in TickTick with Homey"
   },
   "category": [
-    "internet",
-    "tools"
+    "internet"
   ],
-  "tags": {
-    "en": [
-      "todo",
-      "todo list",
-      "tasks",
-      "task list"
-    ],
-    "nl": [
-      "todo",
-      "todo lijst",
-      "taken",
-      "taken lijst"
-    ]
-  },
-  "brandColor": "#4772fa",
-  "homepage": "https://ticktick.com/",
-  "source": "https://github.com/StefanIndustries/HomeyTickTick",
-  "bugs": {
-    "url": "https://github.com/StefanIndustries/HomeyTickTick/issues"
-  },
   "permissions": [],
   "images": {
     "small": "/assets/images/small.png",
@@ -47,170 +26,28 @@
     "name": "Stefan Simon",
     "email": "sjsimon1996@gmail.com"
   },
-  "support": "mailto:sjsimon1996@gmail.com",
-  "contributing": {
-    "donate": {
-      "bunq": {
-        "username": "StefanJSimon"
-      }
-    }
-  },
-  "flow": {
-    "actions": [
-      {
-        "id": "create-task",
-        "title": {
-          "en": "Create Task"
-        },
-        "hint": {
-          "en": "Creates a task"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=ticktickuser"
-          },
-          {
-            "type": "text",
-            "name": "Title",
-            "title": {
-              "en": "Title"
-            },
-            "placeholder": {
-              "en": "Some title for your task"
-            }
-          },
-          {
-            "type": "autocomplete",
-            "name": "project",
-            "title": {
-              "en": "List"
-            },
-            "placeholder": {
-              "en": "Inbox or other list"
-            }
-          }
-        ]
-      },
-      {
-        "id": "create-task-with-start-date",
-        "title": {
-          "en": "Create Task With Start Date"
-        },
-        "hint": {
-          "en": "Creates a task with a start date"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=ticktickuser"
-          },
-          {
-            "type": "text",
-            "name": "Title",
-            "title": {
-              "en": "Title"
-            },
-            "placeholder": {
-              "en": "Some title for your task"
-            }
-          },
-          {
-            "type": "autocomplete",
-            "name": "project",
-            "title": {
-              "en": "List"
-            },
-            "placeholder": {
-              "en": "Inbox or other list"
-            }
-          },
-          {
-            "type": "date",
-            "name": "Date",
-            "placeholder": {
-              "en": "Start Date for your task"
-            }
-          }
-        ]
-      },
-      {
-        "id": "create-task-with-start-date-today",
-        "title": {
-          "en": "Create Task With Start Date Today"
-        },
-        "hint": {
-          "en": "Creates a task with a start date of today"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=ticktickuser"
-          },
-          {
-            "type": "text",
-            "name": "Title",
-            "title": {
-              "en": "Title"
-            },
-            "placeholder": {
-              "en": "Some title for your task"
-            }
-          },
-          {
-            "type": "autocomplete",
-            "name": "project",
-            "title": {
-              "en": "List"
-            },
-            "placeholder": {
-              "en": "Inbox or other list"
-            }
-          }
-        ]
-      }
-    ]
-  },
   "drivers": [
     {
       "name": {
-        "en": "TickTick User",
-        "nl": "TickTick Gebruiker"
+        "en": "TickTickUser"
       },
       "class": "other",
       "capabilities": [],
       "platforms": [
         "local"
       ],
-      "connectivity": [],
+      "connectivity": [
+        "cloud"
+      ],
       "images": {
         "small": "/drivers/ticktickuser/assets/images/small.png",
         "large": "/drivers/ticktickuser/assets/images/large.png",
         "xlarge": "/drivers/ticktickuser/assets/images/xlarge.png"
       },
-      "icon": "/drivers/ticktickuser/assets/icon.svg",
       "pair": [
         {
-          "id": "login_credentials",
-          "template": "login_credentials",
-          "options": {
-            "logo": "/drivers/ticktickuser/assets/images/logoColor.png",
-            "usernameLabel": {
-              "en": "E-mail address or Telephone number"
-            },
-            "usernamePlaceholder": {
-              "en": "john@doe.com"
-            },
-            "passwordLabel": {
-              "en": "Password"
-            },
-            "passwordPlaceholder": {
-              "en": "Password"
-            }
-          }
+          "id": "login_oauth2",
+          "template": "login_oauth2"
         },
         {
           "id": "list_devices",
@@ -226,8 +63,8 @@
       ],
       "repair": [
         {
-          "id": "login_credentials",
-          "template": "login_credentials"
+          "id": "login_oauth2",
+          "template": "login_oauth2"
         }
       ],
       "id": "ticktickuser"
