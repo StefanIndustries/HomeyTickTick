@@ -1,6 +1,6 @@
 {
   "id": "com.ticktick",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "compatibility": ">=5.0.0",
   "sdk": 3,
   "platforms": [
@@ -43,10 +43,8 @@
     "xlarge": "/assets/images/xlarge.png"
   },
   "author": {
-    "name": "Stefan Simon",
-    "email": "sjsimon1996@gmail.com"
+    "name": "Stefan Simon"
   },
-  "support": "mailto:sjsimon1996@gmail.com",
   "contributing": {
     "donate": {
       "bunq": {

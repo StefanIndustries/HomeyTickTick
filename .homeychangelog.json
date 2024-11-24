@@ -10,5 +10,8 @@
   },
   "1.0.3": {
     "en": "Fixed 500 error on login"
+  },
+  "1.1.1": {
+    "en": "Fixed login error with new Ticktick headers"
   }
 }
