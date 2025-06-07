@@ -13,5 +13,8 @@
   },
   "1.1.1": {
     "en": "Fixed login error with new Ticktick headers"
+  },
+  "1.1.2": {
+    "en": "Fixed api error when creating a task"
   }
 }
