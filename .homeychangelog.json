@@ -19,5 +19,8 @@
   },
   "1.1.3": {
     "en": "Fixed login issues with new ticktick api changes"
+  },
+  "1.1.4": {
+    "en": "Updated package dependency to fix a vulnerability"
   }
 }

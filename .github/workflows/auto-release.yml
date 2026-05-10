@@ -2,19 +2,17 @@ name: Validate Homey App
 on:
   push:
     branches: [ "master" ]
-  pull_request:
-    branches: [ "master" ]
 
-jobs:  
+jobs:
     main:
       name: Validate Homey App
       runs-on: ubuntu-latest
       steps:
       - uses: actions/checkout@v4
-      - name: Use Node.js '18.x'
+      - name: Use Node.js '24'
         uses: actions/setup-node@v4
         with:
-          node-version: '18.x'
+          node-version: 24
           cache: 'npm'
       - run: npm ci
       - run: npm run build
@@ -22,7 +20,7 @@ jobs:
         with:
           level: publish
 
-      - name: Publish
+      - name: Publish Homey App
         uses: athombv/github-action-homey-app-publish@master
         id: publish
         with:
